@@ -6,7 +6,7 @@ func main() {
 	for {
 		var num int
 
-		fmt.Println("Input task:")
+		fmt.Println("Select task number:")
 
 		if _, err := fmt.Scanf("%d", &num); err != nil {
 			return
