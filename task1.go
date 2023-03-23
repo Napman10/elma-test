@@ -30,11 +30,7 @@ func checkByRight(ms []rune, ch rune) bool {
 		return false
 	}
 
-	if ms[len(ms)-1] != left {
-		return false
-	}
-
-	return true
+	return ms[len(ms)-1] == left
 }
 
 func BracketsBalanced(str string) bool {

@@ -67,7 +67,7 @@ func ShowTask4() {
 
 	p, err := stack.Pop()
 	if err != nil {
-		fmt.Println("%w", err)
+		fmt.Println(err.Error()) // simple print, not fmt.Errorf
 		return
 	}
 	fmt.Printf("3. pop val %d\n", p)
@@ -75,14 +75,15 @@ func ShowTask4() {
 
 	p, err = stack.Pop()
 	if err != nil {
-		fmt.Println("%w", err)
+		fmt.Println(err.Error())
+		return
 	}
 	fmt.Printf("5. pop val %d\n", p)
 	fmt.Printf("6. after pop %v\n", stack)
 
 	max, err := stack.Max()
 	if err != nil {
-		fmt.Println("%w", err)
+		fmt.Println(err.Error())
 		return
 	}
 	fmt.Printf("7. max val %d\n", max)
